@@ -47,4 +47,8 @@ angular.module('helloWorldApp', [
             template:'hey, this is not found!'
         });
     }
-]);
+])
+.config(function(movieProvider){
+    // name convention
+    movieProvider.setVersion("1.0");
+})

@@ -1,14 +1,16 @@
 angular.module('helloWorldApp')
 .controller('FormCtrl', [
-    '$scope',
-    function($scope) {
-        $scope.message = 'Please enter you';
+    '$scope','MAX_LEN','notificationService','movie',
+    function($scope, MAX_LEN,notificationService, movie) {
+        $scope.message = "please";
         $scope.remaining = function(){
-            return 30 - $scope.message.length;
+            return MAX_LEN - $scope.message.length;
         }
         $scope.hasValidLength = function(){
             // return true or false
             return ($scope.message.length > 10);
         }
+        $scope.number = notificationService.doCal();
+        $scope.testProvider = movie.title;
     }
 ]);
