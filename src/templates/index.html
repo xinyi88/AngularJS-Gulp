@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="helloWorldApp">
+<html lang="en">
     <head>
         <title>A Proper Angular App</title>
         <link href="css/main.css" rel="stylesheet">
     </head>
-    <body>
+    <body  ng-app="helloWorldApp">
         <a href="#!first">first</a>
         <a href="#!second">Second</a> 
         <a href="#!redirect">Redirect</a>
@@ -13,5 +13,10 @@
         <a href="#!form">Form</a>
         <ng-view class="view"></ng-view>
     </body>
+    <!-- <body ng-app="testMod">
+        <div ng-controller="testModCtrl">
+
+        </div>
+    </body> -->
     <script src="js/scripts.js"></script>
 </html>

@@ -51,4 +51,6 @@ angular.module('helloWorldApp', [
 .config(function(movieProvider){
     // name convention
     movieProvider.setVersion("1.0");
-})
+});
+
+ // var testMod = angular.module('testDepMod',['helloWorldApp']);
