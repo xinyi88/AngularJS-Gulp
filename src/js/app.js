@@ -54,3 +54,20 @@ angular.module('helloWorldApp', [
 });
 
  // var testMod = angular.module('testDepMod',['helloWorldApp']);
+angular.module('app',['engines','cars'])
+
+angular.module('cars',[])
+.factory('car', function($log, dieselEngine){
+    return {
+        start : function(){
+            $log.info('Starting'+dieselEngine.type);
+        }
+    };
+});
+
+angular.module('engines',[])
+.factory('dieselEngine', function(){
+    return {
+        type: 'diesel'
+    };
+});
