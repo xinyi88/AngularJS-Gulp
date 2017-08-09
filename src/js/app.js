@@ -22,6 +22,10 @@ angular.module('helloWorldApp', [
                 },
                 caseInsensitiveMatch: true
             })
+            .when('/test', {
+                templateUrl:'views/test.html',
+                controller: 'TestCtrl'
+            })
             .when('/parameter/:p1/:p2/:p3?',{
                  templateUrl: 'views/parameter.html',
                 controller: 'ParameterCtrl'
@@ -54,3 +58,20 @@ angular.module('helloWorldApp', [
 });
 
  // var testMod = angular.module('testDepMod',['helloWorldApp']);
+angular.module('app',['engines','cars'])
+
+angular.module('cars',[])
+.factory('car', function($log, dieselEngine){
+    return {
+        start : function(){
+            $log.info('Starting'+dieselEngine.type);
+        }
+    };
+});
+
+angular.module('engines',[])
+.factory('dieselEngine', function(){
+    return {
+        type: 'diesel'
+    };
+});
