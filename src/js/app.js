@@ -22,6 +22,10 @@ angular.module('helloWorldApp', [
                 },
                 caseInsensitiveMatch: true
             })
+            .when('/test', {
+                templateUrl:'views/test.html',
+                controller: 'TestCtrl'
+            })
             .when('/parameter/:p1/:p2/:p3?',{
                  templateUrl: 'views/parameter.html',
                 controller: 'ParameterCtrl'
